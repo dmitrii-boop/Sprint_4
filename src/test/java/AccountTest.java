@@ -1,3 +1,4 @@
+import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
@@ -43,8 +44,8 @@ public class AccountTest {
     }
 
     @Test
-    @Feature("Проверка имени на банковской карте")
     @DisplayName("Проверка имени")
+    @Description("Проверка имени на банковской карте")
     public void testCheckNameCard() {
         setUp(name);
         assertEquals(status, account.checkNameToEmboss());
